@@ -1,0 +1,84 @@
+<div class="row">
+	<div class="col-xs-3 title-box" style="margin-left: 130px;">
+		<h4>マイページ</h4>
+	</div>
+	<div class="col-xs-6"></div>
+</div>
+
+<div class="row">
+	<nav>
+		<ul class="yours-nav">
+			<li class="yours-li">
+              <h4 class="font-bold yours-li-txt">登録情報</h4>
+            </li>
+
+            <li class="yours-li">
+              <%= link_to "編集する", end_user_edit_path, class: "btn btn-primary yours-btn" %>
+            </li>
+            <li class="yours-li">
+            	<%= link_to "パスワードを変更する", new_end_user_registration_path, class: "btn btn-primary yours-btn" %>
+            </li>
+		</ul>
+	</nav>
+</div>
+
+<div class="row">
+	<div class="col-xs-9">
+		<table class="table table-bordered">
+			<tbody>
+				<tr>
+					<td class="font-bold bgc-sil">氏名</td>
+					<td class="font-bold"><%= @end_user.last_name %> <%= @end_user.first_name %></td>
+				</tr>
+				<tr>
+					<td class="font-bold bgc-sil">カナ</td>
+					<td class="font-bold"><%= @end_user.kana_last_name %> <%= @end_user.kana_first_name %></td>
+				</tr>
+				<tr>
+					<td class ="font-bold bgc-sil" >郵便番号</td>
+					<td class="font-bold"><%= @end_user.postal_code %></td>
+				</tr>
+				<tr>
+					<td class="font-bold bgc-sil bgc-sil" >住所</td>
+					<td class="font-bold"><%= @end_user.address %></td>
+				</tr>
+				<tr>
+					<td class="font-bold bgc-sil">電話番号</td>
+					<td class="font-bold"><%= @end_user.phone_number %></td>
+				</tr>
+				<tr>
+					<td class="font-bold bgc-sil" >メールアドレス</td>
+					<td class="font-bold"><%= @end_user.email %></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<nav>
+		<ul class="yours-nav">
+			<li class="yours-li">
+              <h4 class="font-bold yours-li-txt">配送先</h4>
+            </li>
+
+            <li class="yours-li">
+              <%= link_to "一覧を見る", new_end_user_registration_path, class: "btn btn-primary yours-btn" %>
+            </li>
+		</ul>
+	</nav>
+</div>
+
+<div class="row">
+	<nav>
+		<ul class="yours-nav">
+			<li class="yours-li">
+              <h4 class="font-bold yours-li-txt">注文履歴</h4>
+            </li>
+
+            <li class="yours-li">
+              <%= link_to "一覧を見る", new_end_user_registration_path, class: "btn btn-primary yours-btn" %>
+            </li>
+		</ul>
+	</nav>
+</div>

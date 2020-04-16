@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+
+
+.under-line {
+	height: 90px;
+	line-height: 45px;
+	border-bottom: medium solid #000000;
+}
+ .box-logo {
+ 	width: 300px;
+ 	height: 70px;
+ 	float: left;
+ 	text-align: center;
+ 	margin: 10px auto;
+ 	color: white;
+ 	background: #cde4ff;
+ 	border-top: solid 5px #5989cf;
+ 	border-bottom: solid 5px #5989cf
+ }
+ .box-logo h2 {
+ 	margin: 0;
+ 	padding: 0;
+ 	font-size: 35px;
+ 	line-height: 55px;
+ }
+ .nav {
+ 	float: left;
+ }
+ .nav-list {
+ 	float: right;
+ 	margin: 10px 0;
+ 	padding: 0;
+ 	line-height: 70px;
+ 	color: black;
+ 	list-style: none;
+ 	font-size: 16px;
+ }
+ .nav-list-login {
+ 	float: left;
+ }
+ .li-text {
+ 	width:400px;
+ 	text-align: center;
+ }
+ .adm-login-box {
+ 	margin: 40px auto;
+ }
+ .fl-none {
+ 	float: none;
+ }
+ .title-box {
+ 	text-align: center;
+ 	margin: 30px auto 20px;
+ 	background-color: #DDDDDD;
+ }
+ .title-box h4 {
+ 	margin: 10px auto;
+ 	padding: 0;
+ 	font-weight: bold;
+ }
+ .signup-btn {
+ 	margin: 20px auto;
+ 	text-align: center;
+ }
+ .txt-l {
+ 	text-align: left;
+ }
+ .txt-r {
+ 	text-align: right;
+ }
+ .txt-c {
+ 	text-align: center;
+ }
+.nav-btn {
+	width: 100px;
+	margin: 15px 10px;
+}
+.font-bold {
+	font-weight: bold;
+}
+.bgc-sil {
+	background-color: #DDDDDD;
+}
+.yours-nav {
+	float: left;
+	height: 70px;
+	margin: 0;
+}
+.yours-li {
+	display: inline-block;
+	height: 64px;
+	text-align: center;
+	vertical-align: middle;
+}
+.yours-li-txt {
+	line-height: 45px;
+	height: 64px;
+	width: 120px;
+}
+.yours-btn {
+	margin: 15px 10px;
+}
+.va-middle {
+	vartical-align: middle;
+}
+.leave-title {
+	margin: 80px 0 40px;
+}
+.leave-nav {
+	padding: 0;
+	height: 70px;
+	text-align: center;
+	margin: 0;
+}
+.leave-li {
+	display: inline-block;
+	height: 64px;
+	width: 100px;
+	margin: 25px 10px;
+	text-align: center;
+	vertical-align: middle;
+}

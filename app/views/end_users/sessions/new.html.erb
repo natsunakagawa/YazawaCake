@@ -1,0 +1,60 @@
+<div class="row">
+  <div class="col-xs-2"></div>
+  <div class="col-xs-3">
+    <div class="title-box">
+      <h4>会員の方はこちらからログイン</h4>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-2"></div>
+  <div class="col-xs-8">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="row signup-box">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-3 txt-l">
+          <p>メールアドレス</p>
+        </div>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'col-xs-7' %>
+      </div>
+
+      <div class="row signup-box">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-3 txt-l">
+          <p>パスワード</p>
+        </div>          
+        <%= f.password_field :password, autocomplete: "new-password", :class => 'col-xs-7' %>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-7"></div>
+        <div class="col-xs-5">
+          <%= link_to "=>パスワードを忘れた方はこちら", edit_end_user_password_path %>
+        </div>
+      </div>
+
+      <div class="actions row signup-btn signup-box">
+        <%= f.submit "ログイン", :class => 'col-xs-3 btn btn-primary fl-none' %>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-xs-2"></div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-2"></div>
+  <div class="col-xs-3">
+    <div class="title-box">
+      <h4>登録がお済でない方</h4>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-3"></div>
+  <div class="col-xs-6">
+    <h5 class="font-bold"><span><%= link_to "こちら", new_end_user_registration_path %> </span> から新規登録を行ってください。</h5>
+  </div>
+</div>
