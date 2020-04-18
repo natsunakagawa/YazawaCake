@@ -17,7 +17,7 @@
         </div>
 
         <nav>
-          <ul class="nav-mine">
+          <ul class="nav">
 
             <% if admin_signed_in? %>
               <li class="nav-list">
@@ -26,6 +26,10 @@
 
             <li class="nav-list">
               <%= link_to "商品登録", new_end_user_session_path, class: "btn btn-default nav-btn" %>
+            </li>
+
+            <li class="nav-list">
+              <%= link_to "ジャンル管理", admins_genres_path, class: "btn btn-default nav-btn" %>
             </li>
 
             <li class="nav-list">
@@ -54,13 +58,19 @@
             </li>   
             
           <% else %>
+            
+            <li class="nav-list nav-list">
+              <%= link_to "商品一覧", items_path, class: "btn btn-default nav-btn" %>
+            </li>  
+
             <li class="nav-list">
               <%= link_to "新規登録", new_end_user_registration_path, class: "btn btn-default nav-btn" %>
             </li>
 
             <li class="nav-list">
               <%= link_to "ログイン", new_end_user_session_path, class: "btn btn-default nav-btn" %>
-            </li>   
+            </li>
+ 
           <% end %>
           </ul>
         </nav>
