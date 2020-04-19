@@ -23,7 +23,9 @@
 							<%= item.id %>
 						</td>
 						<td class="txt-c ver-m">
-							<%= item.name %>
+							<%= link_to admins_item_path(item.id) do %>
+								<%= item.name %>
+							<% end %>
 						</td>
 						<td class="txt-c ver-m">
 							<%= item.price %>
@@ -33,9 +35,9 @@
 						</td>
 						<td class="txt-c ver-m">
 							<% if item.sale_status == true %>
-								<p>有効</p>
+								<p>販売中</p>
 							<% else %>
-								<p>無効</p>
+								<p>販売停止中</p>
 							<% end %>
 						</td>
 						
