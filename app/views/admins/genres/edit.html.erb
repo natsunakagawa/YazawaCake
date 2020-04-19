@@ -1,0 +1,39 @@
+<div class="row">
+	<div class="col-xs-4 col-xs-offset-1">
+		<h3 class="font-bold admin-title">ジャンル編集画面</h3>
+	</div>
+</div>
+
+<div class="row genre-nav">
+	<div class="col-xs-8 col-xs-offset-1">
+		<%= form_for @genre, url: admins_genre_path(@genre) do |f| %>
+
+			<ul class="genre-ul">
+				<li class="nav-list genre-list">
+					<%= f.label :ジャンル %>
+				</li>
+				<li class="nav-list genre-list">
+					<%= f.text_field :name, class: "genres-text-field" %>
+				</li>
+
+				<li class="nav-list genre-list">
+					<%= f.label :有効 %>
+				</li>
+				<li class="nav-list genre-list">
+					<%= f.radio_button :is_active, :true %>
+				</li>
+
+				<li class="nav-list genre-list">
+					<%= f.label :無効 %>
+				</li>
+				<li class="nav-list genre-list">
+					<%= f.radio_button :is_active, :false %>
+				</li>
+			
+				<li class="nav-list genre-list">
+					<%= f.submit('変更を保存する', class: 'btn btn-info') %>
+				</li>
+			</ul>
+		<% end %>
+	</div>
+</div>

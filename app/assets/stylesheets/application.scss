@@ -42,10 +42,10 @@
  	line-height: 55px;
  }
  .nav {
- 	float: left;
+ 	float: right;
  }
  .nav-list {
- 	float: right;
+ 	float: left;
  	margin: 10px 0;
  	padding: 0;
  	line-height: 70px;
@@ -61,7 +61,7 @@
  	text-align: center;
  }
  .adm-login-box {
- 	margin: 40px auto;
+ 	margin-top: 40px;
  }
  .fl-none {
  	float: none;
@@ -89,8 +89,11 @@
  .txt-c {
  	text-align: center;
  }
+ ver-m {
+ 	vertical-align: middle;
+ }
 .nav-btn {
-	width: 100px;
+	width: 120px;
 	margin: 15px 10px;
 }
 .font-bold {
@@ -137,4 +140,28 @@
 	margin: 25px 10px;
 	text-align: center;
 	vertical-align: middle;
+}
+.admin-title {
+	margin: 40px auto 10px;
+}
+.genre-nav {
+	margin-bottom: 30px; 
+}
+.genre-ul {
+	padding: 0;
+	float:left;
+}
+.genre-list {
+	height: 40px;
+	margin: 0px 10px;
+}
+.genre-list:first-child {
+	margin-left: 0;
+	float: left;
+}
+.genres-text-field {
+	height: 32px;
+}
+.form-item {
+	margin: 10px auto;
 }
