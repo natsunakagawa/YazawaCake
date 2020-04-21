@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  
+
   devise_for :end_users
   devise_for :admins
 
+  root 'items#index'
+  
   namespace :admins do
-    resources :end_users
-  	resources :items
+    get 'genres/index'
+    get 'genres/edit'
+  end
+
+  namespace :admins do
+    resources :end_users, only: [:index, :show, :edit, :update]
+  	resources :items, only: [:index, :new, :create, :show, :edit, :update]
+    resources :genres, only: [:index, :create, :show, :edit, :update]
   end
 
   resources :end_users, only: [:update]

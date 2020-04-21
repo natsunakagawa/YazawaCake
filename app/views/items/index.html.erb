@@ -1,0 +1,30 @@
+<div class="row" style="margin-top: 40px;">
+	<div class="col-xs-2">
+		<h4>検索ボックス</h4>
+	</div>
+
+	<div class="col-xs-9">
+		<div class="row">
+			<div class="col-xs-7">
+				<span class="fort-bold items-title">商品一覧</span><span>(全<%= @items.count %>件)</span>
+			</div>
+		</div>
+		<div class="row" style="margin-top: 30px;">
+			<% @items.each do |item| %>
+				<% if item.sale_status == true %>
+					<div class="col-xs-3">
+						<div class="row">
+							<%= attachment_image_tag item, :image, format: 'jpeg', fallback: "mv.jpg", size: "150x150" %>
+						</div>
+						<div class="row">
+							<h5 class="font-bold"><%= item.name %></h5>
+						</div>
+						<div class="row" style="margin-bottom: 30px;">
+							<h5 class="font-bold"><span>￥</span><%= item.price %></h5>
+						</div>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</div>

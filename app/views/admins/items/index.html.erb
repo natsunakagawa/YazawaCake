@@ -1,0 +1,50 @@
+<div class="row">
+	<div class="col-xs-4 col-xs-offset-1">
+		<h3 class="font-bold admin-title">ジャンル追加・一覧画面</h3>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-10 col-xs-offset-1">
+		<table class="table">
+			<thead class="bgc-sil">
+				<tr>
+					<th class="font-bold">商品ID</th>
+					<th class="font-bold">商品名</th>
+					<th class="font-bold">税抜き価格</th>
+					<th class="font-bold">ジャンル</th>
+					<th class="font-bold">ステータス</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @items.each do |item| %>
+					<tr>
+						<td class="txt-c ver-m">
+							<%= item.id %>
+						</td>
+						<td class="txt-c ver-m">
+							<%= link_to admins_item_path(item.id) do %>
+								<%= item.name %>
+							<% end %>
+						</td>
+						<td class="txt-c ver-m">
+							<%= item.price %>
+						</td>
+						<td class="txt-c ver-m">
+							<%= item.genre.name %>
+						</td>
+						<td class="txt-c ver-m">
+							<% if item.sale_status == true %>
+								<p>販売中</p>
+							<% else %>
+								<p>販売停止中</p>
+							<% end %>
+						</td>
+						
+					</tr>
+
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>

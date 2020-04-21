@@ -1,0 +1,74 @@
+<div class="row">
+	<div class="col-xs-4 col-xs-offset-1">
+		<h3 class="font-bold admin-title">ジャンル追加・一覧画面</h3>
+	</div>
+</div>
+
+<div class="row genre-nav">
+	<div class="col-xs-8 col-xs-offset-1">
+		<%= form_for @genre, url: admins_genres_path do |f| %>
+
+			<ul class="genre-ul">
+				<li class="nav-list genre-list">
+					<%= f.label :ジャンル %>
+				</li>
+				<li class="nav-list genre-list">
+					<%= f.text_field :name, class: "genres-text-field" %>
+				</li>
+
+				<li class="nav-list genre-list">
+					<%= f.label :有効 %>
+				</li>
+				<li class="nav-list genre-list">
+					<%= f.radio_button :is_active, :true %>
+				</li>
+
+				<li class="nav-list genre-list">
+					<%= f.label :無効 %>
+				</li>
+				<li class="nav-list genre-list">
+					<%= f.radio_button :is_active, :false %>
+				</li>
+			
+				<li class="nav-list genre-list">
+					<%= f.submit('追加する', class: 'btn btn-info') %>
+				</li>
+			</ul>
+		<% end %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-1"></div>
+	<div class="col-xs-5">
+		<table class="table">
+			<thead class="bgc-sil">
+				<tr>
+					<th class="font-bold">ジャンル</th>
+					<th class="font-bold">状態</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @genres.each do |genre| %>
+					<tr>
+						<td class="txt-c ver-m">
+							<%= genre.name %>
+						</td>
+						<td class="txt-c ver-m">
+							<% if genre.is_active == true %>
+								<p>有効</p>
+							<% else %>
+								<p>無効</p>
+							<% end %>
+						<td class="txt-c">
+							<%= link_to "編集する", edit_admins_genre_path(genre), class: "btn btn-primary" %>
+						</td>
+						
+					</tr>
+
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
