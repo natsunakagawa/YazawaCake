@@ -17,9 +17,7 @@
 							<%= attachment_image_tag item, :image, format: 'jpeg', fallback: "mv.jpg", size: "150x150" %>
 						</div>
 						<div class="row">
-							<%= link_to item_path(item) do %>
-								<h5 class="font-bold"><%= item.name %></h5>
-							<% end %>
+							<h5 class="font-bold"><%= item.name %></h5>
 						</div>
 						<div class="row" style="margin-bottom: 30px;">
 							<h5 class="font-bold"><span>￥</span><%= item.price %></h5>
