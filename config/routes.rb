@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'cart_items/index'
   devise_for :end_users
   devise_for :admins
 
@@ -17,8 +18,8 @@ Rails.application.routes.draw do
   end
 
   resources :end_users, only: [:update]
-  resources :items, only: [:index]
-
+  resources :items, only: [:index, :show]
+  resources :cart_items, only: [:index, :create, :update]
 
   get 'end_users/yours' => 'end_users#yours', as: 'end_user_yours'
   get 'end_users/yours/edit' => 'end_users#edit', as: 'end_user_edit'
