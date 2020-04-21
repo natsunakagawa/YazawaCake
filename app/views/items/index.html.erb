@@ -14,7 +14,7 @@
 				<% if item.sale_status == true %>
 					<div class="col-xs-3">
 						<div class="row">
-							<%= attachment_image_tag item, :image, format: 'jpeg', size: "150x150" %>
+							<%= attachment_image_tag item, :image, format: 'jpeg', fallback: "mv.jpg", size: "150x150" %>
 						</div>
 						<div class="row">
 							<h5 class="font-bold"><%= item.name %></h5>
