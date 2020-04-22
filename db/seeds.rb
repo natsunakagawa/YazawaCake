@@ -9,3 +9,6 @@
 Admin.create(email: 'infratop@gmail.com', 
 					password: '111111'
 				)
+Genre.create(id: 1, name: 'ケーキ')
+Item.create(genre_id: 1, name: 'チーズケーキ', introduction: 'おいしいよ', 
+			price: 480)

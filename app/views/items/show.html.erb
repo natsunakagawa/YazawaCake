@@ -36,7 +36,7 @@
 	<div class="col-xs-5 col-xs-offset-7">
 		<%= form_for @cart_item, url: cart_items_path do |f| %>
 
-			<%= f.hidden_field :image_id, :value => @item.id %>
+			<%= f.hidden_field :item_id, :value => @item.id %>
 
 			<ul class="genre-ul">
 				

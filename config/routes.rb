@@ -25,6 +25,8 @@ Rails.application.routes.draw do
   get 'end_users/yours/edit' => 'end_users#edit', as: 'end_user_edit'
   get 'end_users/leave' => 'end_users#leave', as: 'end_user_leave'
   patch 'end_users/:id/hide' => 'end_users#hide', as: 'end_user_hide'
+  delete 'cart_items/item/:id' => 'cart_items#destroy_item', as: 'cart_items_destroy_item'
+  delete 'cart_items' => 'cart_items#destroy_cart', as: 'cart_items_destroy_cart'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
