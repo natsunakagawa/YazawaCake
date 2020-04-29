@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_21_085540) do
+ActiveRecord::Schema.define(version: 2020_04_27_032651) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.integer "end_user_id", null: false
+    t.string "name", null: false
+    t.string "address", null: false
+    t.string "postal_code", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -67,6 +76,31 @@ ActiveRecord::Schema.define(version: 2020_04_21_085540) do
     t.boolean "sale_status", default: true, null: false
     t.integer "price", null: false
     t.string "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "order_details", force: :cascade do |t|
+    t.integer "item_id", null: false
+    t.integer "order_id", null: false
+    t.integer "amount", null: false
+    t.integer "buy_price", null: false
+    t.integer "make_status", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "end_user_id", null: false
+    t.string "ship_name", null: false
+    t.string "ship_address", null: false
+    t.integer "ship_postal_code", null: false
+    t.integer "order_status", default: 0
+    t.integer "postage", null: false
+    t.integer "payment", null: false
+    t.integer "payment_method", null: false
+    t.integer "select_address"
+    t.string "address_info"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
