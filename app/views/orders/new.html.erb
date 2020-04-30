@@ -16,7 +16,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<%= f.radio_button :payment_method, 0 %>
+					<%= f.radio_button :payment_method, 0, {:checked => true} %>
 					<%= f.label :クレジットカード %>
 				</div>
 				<div class="row">
@@ -31,7 +31,7 @@
 				</div>
 
 				<div class="row">
-					<%= f.radio_button :select_address, 1 %>
+					<%= f.radio_button :select_address, 1, {:checked => true} %>
 					<%= f.label :ご自身の住所 %>
 				</div>
 				<div class="row">

@@ -53,7 +53,7 @@ class OrdersController < ApplicationController
       @order.ship_postal_code = @address.postal_code
 
     else
-      @oreder.ship_name = order_params[:ship_name]
+      @order.ship_name = order_params[:ship_name]
       @order.ship_address = order_params[:ship_address]
       @order.ship_postal_code = order_params[:ship_postal_code]
     
