@@ -5,7 +5,11 @@ class Admins::ItemsController < ApplicationController
 	end
 
 	def index
-		@items = Item.all
+		if params[:search].present?
+			@items = Item.where('name LIKE ?', "%#{params[:search]}%")
+		else
+			@items = Item.all
+		end
 	end
 
 	def show
