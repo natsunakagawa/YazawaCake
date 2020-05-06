@@ -6,12 +6,6 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
 
-  def index
-  end
-
-  def show
-  end
-
   def confirm
     if order_params[:payment_method] == nil || order_params[:select_address] == nil
       redirect_to new_order_path
@@ -80,7 +74,7 @@ class OrdersController < ApplicationController
   end
 
   def complete
-    
+    #画面表示のみ
   end
 
   def confirm_cart_item
